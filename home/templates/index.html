@@ -1,0 +1,223 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=devide-width, initial-scale=1.0">
+        <title>VEM-Vila Eduacional de Meninas</title>
+        <link rel="stylesheet" type= "text/css" href="{% static 'css/style.css' %}">
+        <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    </head>
+
+
+    <body>
+        <!--Header-->
+        <header class="header">
+            <div class="container">
+                <div class="logo">
+                    <a href="{% url 'index' %}">
+                        <img src="{% static 'img/vem_logo.png' %}">
+                    </a>
+                </div>
+                <div class="menu">
+                    <nav>
+                        <a href="{% url 'sobre' %}">Sobre nós</a>
+                        <a href="{% url 'transparencia' %}">Transparência</a>
+                        <a href="{% url 'projetos' %}">Projetos</a>
+                        <a href="{% url 'contato' %}">Contato</a>
+                    </nav>
+                </div>
+                <div>
+                    <button class="botao">Login</button>
+                </div>
+            </div>
+            
+        </header>
+        
+        
+
+            <!--Hero-->
+            <section class="hero">
+                <img class="img-hero" src="{% static 'img/Novo Hero da VEM.png' %}">
+                <div class="hero-titulo">
+                    <h2>Há 30 anos fazendo a diferença</h2>
+                    <p>Conheça nossos projetos e faça parte desse movimento!</p>
+                    <button class="botao"> <a href="{% url 'projetos' %}">Projetos</a></button>
+                    <button class="botao"> <a href="{% url 'apadrinhe' %}"> Apadrinhe</a></button>
+                </div>
+            </section>
+            
+            <!--Sobre nos-->
+            <section class="sobre-nos">
+                <div class="container">
+                    <div class="card">
+                        <div class="img"><img src="{% static 'img/casa.png' %}" alt="casa do bem"></div>
+                        <h3>Conheça a VEM</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                            Lorem Ipsum has been the
+                            industry's standard dummy text ever since the 1500s,
+                            when an unknown printer took a galley of type and 
+                            scrambled it to make a type specimen book</p>
+                    </div>
+                    <div class="card">
+                        <div class="img"><img src="{% static 'img/menina.png' %}" alt="menina"></div>
+                        <h3>Conheça a VEM</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                            Lorem Ipsum has been the
+                            industry's standard dummy text ever since the 1500s,
+                            when an unknown printer took a galley of type and 
+                            scrambled it to make a type specimen book</p>
+                    </div>
+                    <div class="card">
+                        <div class="img"><img src="{% static 'img/cuidados-de-saude.png' %}" alt="doação"></div>
+                        <h3>Conheça a VEM</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                            Lorem Ipsum has been the
+                            industry's standard dummy text ever since the 1500s,
+                            when an unknown printer took a galley of type and 
+                            scrambled it to make a type specimen book</p>
+                    </div>
+                </div>
+            </section>
+
+            <!--Nossos Projetos-->
+            <section class="projeto">
+                <h2>Nossos Projetos</h2>
+                <p>Conheça nossos projetos e faça parte desse movimento!</p>
+            
+                <div class="projetos">
+                    <div class="card">
+                        <img src="{% static 'img/plano A.png' %}" alt="">
+                        <h3 class="titulo">Salão de Beleza</h3>
+                        <p class="texto">Oferecer profissionalização na área de cabeleireiro, manicure e design de sombrancelhas para pessoas em situação de extrema pobreza</p>
+
+                    </div>
+                    <div class="card">
+                        <img src="{% static 'img/Plano B.png' %}" alt="">
+                        <h3 class="titulo">Enem Social</h3>
+                        <p class="texto">Oportunizar o ingresso de alunos em situação de vulnerabilidade socioeconômica das escolas públicas no ensiona superior</p>
+                    </div>
+                    <div class="card">
+                        <img src="{% static 'img/Plano C.png' %}" alt="">
+                        <h3 class="titulo">Cultura e Lazer</h3>
+                        <p class="texto">Realizar atividades que possam promover o acesso à cultura, à arte, à educação, ao lazer e ao brincar para as crianças</p>
+                    </div>
+                    
+                </div>
+                <div class="botao-center">
+                    <button class="botao"> <a href="{% url 'projetos' %}"> Saiba mais </a></button>
+                </div>
+            
+            </section>
+
+            <!--Nossos planos-->
+            <section class="transparencia">
+                <h2>Conheça nossos planos</h2>
+                <p>Veja como sua ajuda faz a diferença no dia a dia das meninas</p>
+            
+                <div class="trans">
+                    
+                    <div class="card">
+                        <p>Plano Cor de Rosa</p>
+                        <h3>R$-- <span>/ mês</span> </h3>
+                        
+                        <ul>
+                            <li>Doação única de qualquer valor</li>
+                            <li>Ajuda nas despesas</li>
+                            <li>-</li>
+                            
+                        </ul>
+                        <div class="botao-trans"><button class="botao"> <a href="{% url 'apadrinhe' %}"> Saiba mais</a></button></div>
+                    </div>
+
+                    <div class="card">
+                        <p>Plano Borboleta</p>
+                        <h3>R$20  <span>/ mês</span></h3>
+                        <ul>
+                            <li>Alimentação</li>
+                            <li>Produtos de higiene</li>
+                            <li>-</li>
+                            <li>-</li>
+                        </ul>
+                        <div class="botao-trans"><button class="botao"> <a href="{% url 'apadrinhe' %}"> Saiba mais</a></button></div>
+                    </div>
+
+                    <div class="card">
+                        <p>Plano Arco-íris</p>
+                        <h3>R$50 <span>/ mês</span></h3>
+                        <ul>
+                            <li>Uniformes</li>
+                            <li>Livros</li>
+                            <li>Cursos</li>
+                            <li>-</li>
+                        </ul>
+                        <div class="botao-trans"><button class="botao"> <a href="{% url 'apadrinhe' %}">Saiba mais</a></button></div>
+                    </div>
+
+                    <div class="card">
+                        <p>Plano Algodão Doce</p>
+                        <h3>R$100 <span>/ mês</span></h3>
+                        <ul>
+                            <li>Roupas e sapatos</li>
+                            <li>Secadores e pranchas </li>
+                            <li>shampoo e condicionador</li>
+                            <li>Artesanato</li>
+                        </ul>
+                        <div class="botao-trans"><button class="botao"> <a href="{% url 'apadrinhe' %}">Saiba mais</a></button></div>
+                    </div>
+                </div>
+            </section>
+
+            <!--Venha nos visitar-->
+
+            <div class="visitar">
+                <h2>Venha nos visitar</h2>
+                
+                <div class="container">
+                    <div class="mapa">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3789.268299268902!2d-43.606345824815136!3d-18.243518182797107!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xaeb9ab60065645%3A0x6266739aeae345d6!2sR.%20da%20Luz%20-%20Diamantina%2C%20MG%2C%2039100-000!5e0!3m2!1spt-BR!2sbr!4v1706376820774!5m2!1spt-BR!2sbr"  style="border:0; padding: 2rem;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+            <footer class="rodape" id="contato">
+                <div class="rodape-div">
+            
+                    <div class="rodape-div-1">
+                        <div class="rodape-div-1-coluna">
+                            <!-- elemento -->
+                            <span><b>LOGO</b></span>
+                            <p>Diamantina-MG, Centro, Rua da Luz, n 340</p>
+                            <p>vilaeducacionaldemeninas@gmail.com</p>
+                            <p>+55 (38) 91234-5678</p>
+                        </div>
+                    </div>
+            
+                    <div class="rodape-div-2">
+                        <div class="rodape-div-2-coluna">
+                            <!-- elemento -->
+                            <span><b>Links</b></span>
+                            <p><a href="{% url 'sobre' %}">Sobre</a></p>
+                            <p><a href="{% url 'projetos' %}">Projetos</a></p>
+                            <p><a href="{% url 'transparencia' %}">Transparência</a></p>
+                        </div>
+                    </div>
+            
+                    <div class="rodape-div-3">
+                        <div class="rodape-div-3-coluna">
+                            <!-- elemento -->
+                            <span><b>Outros</b></span>
+                            <a href="{% url 'politicas' %}"><p>Políticas de Privacidade</p></a>
+                            <a href="{% url 'termos' %}"><p>Termos de serviço</p></a>
+                        </div>
+                    </div>
+            
+                </div>
+                <p class="rodape-direitos">Copyright © 2024 – Todos os Direitos Reservados.</p>
+            </footer>
+        
+        
+    </body>
+</html>

@@ -1,0 +1,398 @@
+
+*, footer{
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    outline:none;
+    box-sizing: border-box;
+}
+
+
+
+.header .container{
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header{
+    background-color: #FFF;
+    width: 100%;
+    padding: 10px;
+}
+
+.logo{
+    width: 20%;
+}
+
+.logo img{
+    width: 90px;
+}
+
+.menu{
+    width: 50%;
+}
+
+.menu nav a{ 
+    color: #265691;
+    text-decoration: none;
+    padding-right: 50px;
+    font-size: 18px;
+
+}
+
+.botao a{
+    text-decoration: none;
+    color: #FFF;
+}
+
+.botao{
+    background: #265691;
+    color:#FFF;
+    padding: 10px 10px;
+    display: inline-block;
+    outline: 0;
+    width: 109px;
+    height: 40px;
+    flex-shrink: 0;
+    border-radius: 3px;
+    border: none;
+    font-size: 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+
+.botao:hover{
+    background-color: #4F719B;
+}
+
+body{
+    
+    font-size: 15px;
+}
+h2{
+    color: #3F324D;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+p{
+    color: #495665;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+/* Hero */
+.hero{
+    display: flex;
+    justify-content: center;
+}
+
+.img-hero{
+    width: 100%;
+}
+
+.hero .hero-titulo{
+    text-align: center;
+    position: absolute;
+    top: 250px;  
+    left: 35%;
+}
+
+.hero-titulo h2{
+    color:  #3F324D;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.hero-titulo p{
+    font-size: 20px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    
+}
+
+.hero-titulo button{
+    margin-left: 30px;
+}
+
+
+/*sobre nos*/
+.sobre-nos{
+    margin-bottom: 80px;
+}
+
+.sobre-nos .container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.container .card{
+    margin: 30px;
+    width: 350px;
+    height: 350px;
+    text-align: left;
+}
+.container .card h3{
+    text-align: center;
+}
+.container .card .img{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.container .card img{
+    border-radius: 10px;
+}
+
+.container .card h3{
+    color:  #3F324D;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.container .card p{
+    color: #495665; 
+    font-size: 16px;
+    padding: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+
+/*Nossos Projetos*/
+.projeto{
+    margin-bottom: 80px;
+}
+.projeto h2{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.projeto p{
+    text-align: center;
+    margin-bottom: 50px;
+}
+.projetos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.projetos .card{
+    margin: 30px;
+    background-color: rgba(156, 196, 224, 0.80);
+    width: 350px;
+    height: 500px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+
+.projetos .card h3{
+    color:  #3F324D;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 5px;
+}
+
+.projetos .card p{
+    color: #495665; 
+    font-size: 16px;
+    padding: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.projetos .card img{
+    width: 100%;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px ;
+}
+
+.projeto .botao-center{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+/*Transparencia*/
+
+.transparencia h2{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.transparencia p{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.trans {  
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: min(1600px, 100%);
+    margin: auto;
+
+}
+
+.trans .card{
+    flex: 1;
+    background-color:#C5AFFF;
+    max-width: 360px;
+    margin: 30px 30px;
+    /*height: 700px;*/
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.trans .card p{
+    background-color: #FFC9FF;
+    display: inline-block;
+    color:  #3F324D;
+    padding: 10px 30px;
+    border-radius: 0 0 20px 20px;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.card ul li::before{
+    content: '\2022';
+    color: #265691;
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+.card h3{
+    color: #265691;
+    font-size: 44px;
+    margin: 20px 0 40px;
+    font-weight: 500;
+}
+
+.card h3 span{
+    font-size: 16px;
+}
+
+
+.card li{
+    list-style-type: none;
+    font-size: 16px;
+    color: #495665;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.trans .card .botao-trans{
+   display: inline-block;
+   margin-bottom: 40px;
+   margin-top: 20px;
+   padding: 18px 40px;
+}
+
+/*Visitar*/
+
+.visitar h2{
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 50px;
+}
+
+.visitar .container .mapa{
+    /*position: relative*/
+    width: 1440px;
+    height: 400px;
+}
+
+.visitar .mapa iframe{
+    width: 100%;
+    height: 100%;
+}
+
+.visitar .container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    margin: auto;
+}
+
+
+/*Footer*/
+.rodape{
+    background-color: #265691;
+    color: white;
+    height: auto;
+    width: 100%;
+    font-size: 14px;
+    font-family: helvetica;
+}
+.rodape a{
+    text-decoration: none;
+    color: #9CC4E0;
+}
+.rodape p{
+    margin-bottom: 5px;
+}
+.rodape-div{
+    display: flex;
+    flex-wrap: wrap;
+    width:100%;
+    margin: auto;
+    align-items: stretch;
+    padding: 60px 10px 40px 10px;
+}
+
+.rodape-div p{
+    color: #9CC4E0;
+}
+.rodape-div-1, .rodape-div-2, .rodape-div-3{
+    display: flex;
+    justify-content: center;
+    width: calc(100% / 3 - 20px);
+    padding: 10px;
+}
+.rodape span{
+    font-size: 20px;
+    color: white;
+}
+.rodape-direitos{
+   
+    background-color: black;
+    padding: 10px;
+    margin: 0px;
+    text-align: center;
+}
+/*mobile*/
+@media (max-width: 768px) {
+    .rodape-div-1, .rodape-div-2, .rodape-div-3, .rodape-div-4{
+        width: calc(50% - 20px);
+        padding: 10px;
+    }
+    .rodape-div{
+        padding: 60px 0px 40px 0px;
+    }
+}
