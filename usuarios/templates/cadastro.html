@@ -1,0 +1,21 @@
+{% extends 'modelo.html' %}
+
+{% block titulo %}
+<title>Cadastro Usuário</title>
+{% endblock %}
+
+{% block hero%}
+    <p>Cadastro de Usuário</p>
+    <form action="{% url 'cadastro' %}" method="POST"> {% csrf_token %}
+        <input type="text" placeholder="Username..." name="username">
+        <br>
+        <input type="email" placeholder="Email..." name="email">
+        <br>
+        <input type="password" placeholder="Senha..." name="senha">
+        <br>
+        <input type="submit" value="cadastrar">
+        <br>
+    </form>
+{% endblock %}
+
+
