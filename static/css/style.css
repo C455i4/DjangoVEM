@@ -386,6 +386,13 @@ p{
     margin: 0px;
     text-align: center;
 }
+
+.formulario{
+    display: flex;
+    align-items: center;
+}
+
+
 /*mobile*/
 @media (max-width: 768px) {
     .rodape-div-1, .rodape-div-2, .rodape-div-3, .rodape-div-4{

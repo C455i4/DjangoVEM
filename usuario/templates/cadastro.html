@@ -1,0 +1,107 @@
+{% extends 'modelo.html' %}
+
+
+{% block titulo %}
+<title>Cadastro Usuário</title>
+{% endblock %}
+
+
+{% block hero%}
+
+    <div class="formulario">
+
+        <form method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                {{form_usuario.nome.errors}}
+                <label>Nome: </label>
+                {{form_usuario.nome}}
+            </div>
+            <div class="form-group">
+                {{form_usuario.email.errors}}
+                <label>E-mail: </label>
+                {{form_usuario.email}}
+            </div>
+            <div class="form-group">
+                {{form_usuario.senha.errors}}
+                <label>Senha: </label>
+                <input type="password" name= "{{ form_usuario.senha.name }}"/>
+            </div>
+            <div class="form-group">
+                {{form_usuario.cpf.errors}}
+                <label>CPF: </label>
+                {{form_usuario.cpf}}
+            </div>
+            <div class="form-group">
+                {{form_usuario.telefone.errors}}
+                <label>Telefone: </label>
+                {{form_usuario.telefone}}
+            </div>
+            <div class="form-group">
+                {{form_usuario.cep.errors}}
+                <label>CEP: </label>
+                {{form_usuario.cep}}
+            </div>
+            <div class="form-group">
+                {{form_usuario.endereco.errors}}
+                <label>Endereço: </label>
+                {{form_usuario.endereco}}
+            </div>
+            <div class="form-group">
+                {{form_usuario.numero.errors}}
+                <label>Numero: </label>
+                {{form_usuario.numero}}
+            </div>
+            <div class="form-group">
+                {{form_usuario.complemento.errors}}
+                <label>Complemento: </label>
+                {{form_usuario.complemento}}
+            </div>
+            <div class="form-group">
+                {{form_usuario.bairro.errors}}
+                <label>Bairro: </label>
+                {{form_usuario.bairro}}
+            </div>
+            <div class="form-group">
+                {{form_usuario.uf.errors}}
+                <label>UF: </label>
+                {{form_usuario.uf}}
+            </div>
+            <div class="form-group">
+                {{form_usuario.cidade.errors}}
+                <label>Cidade: </label>
+                {{form_usuario.cidade}}
+            </div>
+        
+            <div class="form-group">
+                <input type="submit" value="Cadastrar" class="btn btn-primary">
+            </div>
+        </form>
+
+        <form method="post">
+            {% csrf_token %}
+
+            <div class="form-group">
+                {{form_login.email.errors}}
+                <label>E-mail: </label>
+                {{form_login.email}}
+            </div>
+
+            <div class="form-group">
+                {{form_login.senha.errors}}
+                <label>Senha: </label>
+                {{form_login.senha}}
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Enviar" class="btn btn-primary">
+            </div>
+        </form>
+    </div>
+{% endblock %}
+
+
+
+
+
+
