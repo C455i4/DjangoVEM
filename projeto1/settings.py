@@ -28,7 +28,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
+AUTH_USER_MODEL = 'accounts.CustomUser'
 # Application definition
 
 INSTALLED_APPS = [
@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'home',
-    'usuario',
+    'accounts',
     
 ]
 
@@ -131,3 +131,5 @@ STATICFILES_DIRS  = [
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
+LOGOUT_REDIRECT_URL = 'index'
+LOGIN_REDIRECT_URL = 'login'
