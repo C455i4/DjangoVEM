@@ -35,7 +35,7 @@
                     </nav>
                 </div>
                 <div>
-                    <button class="botao">Login</button>
+                    <button class="botao"><a href="">Login</a></button>
                 </div>
             </div>
             
@@ -57,7 +57,7 @@
             
 
             <!--Venha nos visitar-->
-        {% block footer %}
+            {% block visitar %}
             <div class="visitar">
                 <h2>Venha nos visitar</h2>
                 
@@ -67,6 +67,9 @@
                     </div>
                 </div>
             </div>
+            {% endblock %}
+
+            {% block footer %}
             <footer class="rodape" id="contato">
                 <div class="rodape-div">
             

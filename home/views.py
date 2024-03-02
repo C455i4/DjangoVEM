@@ -24,3 +24,6 @@ def termos(request):
 
 def transparencia(request):
     return render(request,'transparencia.html')
+
+def doacao(request):
+    return render(request,'doacao.html')

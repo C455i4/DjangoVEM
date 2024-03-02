@@ -8,24 +8,25 @@
 
 {% block hero%}
 
-    <div class="formulario">
+
 
         <form method="post">
             {% csrf_token %}
-            <div class="form-group">
-                {{form_usuario.nome.errors}}
-                <label>Nome: </label>
-                {{form_usuario.nome}}
-            </div>
+        
             <div class="form-group">
                 {{form_usuario.email.errors}}
                 <label>E-mail: </label>
                 {{form_usuario.email}}
             </div>
             <div class="form-group">
-                {{form_usuario.senha.errors}}
+                {{form_usuario.nome.errors}}
+                <label>Nome: </label>
+                {{form_usuario.nome}}
+            </div>
+            <div class="form-group">
+                {{form_usuario.password.errors}}
                 <label>Senha: </label>
-                <input type="password" name= "{{ form_usuario.senha.name }}"/>
+                <input type="password" name= "{{ form_usuario.password.name }}"/>
             </div>
             <div class="form-group">
                 {{form_usuario.cpf.errors}}
@@ -72,36 +73,15 @@
                 <label>Cidade: </label>
                 {{form_usuario.cidade}}
             </div>
-        
-            <div class="form-group">
+                
                 <input type="submit" value="Cadastrar" class="btn btn-primary">
-            </div>
+            
         </form>
-
-        <form method="post">
-            {% csrf_token %}
-
-            <div class="form-group">
-                {{form_login.email.errors}}
-                <label>E-mail: </label>
-                {{form_login.email}}
-            </div>
-
-            <div class="form-group">
-                {{form_login.senha.errors}}
-                <label>Senha: </label>
-                {{form_login.senha}}
-            </div>
-
-            <div class="form-group">
-                <input type="submit" value="Enviar" class="btn btn-primary">
-            </div>
-        </form>
-    </div>
+    
 {% endblock %}
 
-
-
+{% block visitar %}
+{% endblock %}
 
 
 
