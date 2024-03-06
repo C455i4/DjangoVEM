@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 def index(request):
@@ -25,5 +26,6 @@ def termos(request):
 def transparencia(request):
     return render(request,'transparencia.html')
 
+@login_required
 def doacao(request):
     return render(request,'doacao.html')
