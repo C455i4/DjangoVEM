@@ -68,7 +68,7 @@ header{
 
 
 .botao:hover{
-    background-color: #4F719B;
+    background-color: #5b7ba3;
 }
 
 body{
@@ -265,9 +265,9 @@ p{
 }
 
 .trans .card p{
-    background-color: #FFC9FF;
+    background-color:#FFC9FF;
     display: inline-block;
-    color:  #3F324D;
+    color:  #265691;
     padding: 10px 30px;
     border-radius: 0 0 20px 20px;
     font-size: 16px;
