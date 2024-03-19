@@ -16,11 +16,19 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from planos.views import CreateCheckoutSessionView, PlanosView, SuccessView, CancelView, stripe_webhook
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('home.urls')),
+    path('webhooks/stripe/', stripe_webhook, name='stripe-webhook'),
     path('cadastro/', include('accounts.urls')),
+    path('create-checkout-session/<pk>/', CreateCheckoutSessionView.as_view(), name='create-checkout-session'),
+    path('planos/', PlanosView.as_view(), name='planos'),
+    path('cancel/', CancelView.as_view(), name= 'cancel'),
+    path('sucess/', SuccessView.as_view(), name='sucess'),
+   
     
     
 ]
