@@ -3,12 +3,79 @@
 {% block titulo %}
 <title>Doação</title>
 {% endblock %}
-
+{% block header %}
+{% endblock %}
 {% block hero%}
-    <h1>Aqui tera uma imagem de hero diferente das demais paginas</h1>
-    <p>Doação</p>
+    <button type="button" class="btn btn-danger"><a href="{% url 'logout' %}" style="text-decoration: none;
+        color: #FFF;">Logout</a></button>
 
-    <button class="botao"><a href="{% url 'logout' %}">Logout</a></button>
+    <button type="button" class="btn btn-warning" ><a href="https://billing.stripe.com/p/login/test_4gwdT7eOrblLgnK8ww" style="text-decoration: none;
+        color: #FFF;">Cancelar/Alterar Plano</a></button>
+    
+    <section class="transparencia">
+        <h2>Conheça nossos planos</h2>
+        <p>Veja como sua ajuda faz a diferença no dia a dia das meninas</p>
+    
+        <div class="trans">
+            
+            <div class="card">
+                <p>Plano Cor de Rosa</p>
+                <h3>R$15 <span>/ mês</span> </h3>
+                
+                <ul>
+                    <li>Sua doação</li>
+                    <li>ajuda nas despesas</li>
+                    <li>-</li>
+                    
+                </ul>
+                <div class="botao-trans"><button type="button" class="btn btn-success"> <a href="https://buy.stripe.com/test_dR602ydDI5cmdEI8wA" style="text-decoration: none;
+                    color: #FFF;"> Assinar</a></button></div>
+            </div>
+
+            <div class="card">
+                <p>Plano Borboleta</p>
+                <h3>R$20  <span>/ mês</span></h3>
+                <ul>
+                    <li>Alimentação</li>
+                    <li>Produtos de higiene</li>
+                    <li>-</li>
+                    <li>-</li>
+                </ul>
+                <div class="botao-trans"><button type="button" class="btn btn-success"> <a href="https://buy.stripe.com/test_7sI5mS1V020a6cg6oo" style="text-decoration: none;
+                    color: #FFF;"> Assinar</a></button></div>
+            </div>
+
+            <div class="card">
+                <p>Plano Arco-íris</p>
+                <h3>R$50 <span>/ mês</span></h3>
+                <ul>
+                    <li>Uniformes</li>
+                    <li>Livros</li>
+                    <li>Cursos</li>
+                    <li>-</li>
+                </ul>
+                <div class="botao-trans"><button type="button" class="btn btn-success"> <a href="https://buy.stripe.com/test_00gaHcbvAdISeIM3ce" style="text-decoration: none;
+                    color: #FFF;">Assinar</a></button></div>
+            </div>
+
+            <div class="card">
+                <p>Plano Algodão Doce</p>
+                <h3>R$100 <span>/ mês</span></h3>
+                <ul>
+                    <li>Roupas e sapatos</li>
+                    <li>Secadores e pranchas </li>
+                    <li>shampoo e condicionador</li>
+                    <li>Artesanato</li>
+                </ul>
+                <div class="botao-trans"><button type="button" class="btn btn-success"> <a href="https://buy.stripe.com/test_cN29D86bg48i8ko147" style="text-decoration: none;
+                    color: #FFF;">Assinar</a></button></div>
+            </div>
+        </div>
+    </section>
+
+    
 {% endblock %}
 
 
+{% block visitar %}
+{% endblock %}
