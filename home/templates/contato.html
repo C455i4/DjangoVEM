@@ -5,8 +5,51 @@
 {% endblock %}
 
 {% block hero%}
-    <h1>Aqui tera uma imagem de hero diferente das demais paginas</h1>
-    <p>Pagina Contato</p>
+
+<div class="col-md-6 m-auto" style="margin-top: 60px; width: 90%; display: flex;padding: 20px; justify-content: center; align-items: center;
+background-color: #fff; 
+border-radius: 10px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); margin-bottom: 30px;">
+
+    <form class="row g-3" method="post" >
+        {% csrf_token %}
+        <div class="form-group row mb-2 d-flex flex-column align-content-center">  
+            <div class="col-sm-10 text-center"><h3 style="color: #265691; margin-top: 20px; ">Entre em contato conosco</h3></div>  
+          </div> 
+
+        <div style="  background-color: #fff; margin: 40px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Nome completo</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" >
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Email</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" >
+            </div>
+
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Sua mensagem</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+            <button class="btn btn-primary" type="submit">Enviar</button>
+            </form>
+           
+        </div>
+        <div class="visitar" style="width: 50%; margin-top: 40px; margin-left: 30px;">
+
+            <div class="container">
+                <div class="mapa">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3789.268299268902!2d-43.606345824815136!3d-18.243518182797107!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xaeb9ab60065645%3A0x6266739aeae345d6!2sR.%20da%20Luz%20-%20Diamantina%2C%20MG%2C%2039100-000!5e0!3m2!1spt-BR!2sbr!4v1706376820774!5m2!1spt-BR!2sbr"  style="border:0; padding: 2rem;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+        
+  </div>
 {% endblock %}
 
 
+{% block visitar %}
+
+{% endblock %}
