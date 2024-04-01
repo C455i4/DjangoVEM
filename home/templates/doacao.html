@@ -6,11 +6,15 @@
 {% block header %}
 {% endblock %}
 {% block hero%}
+<div style="margin: 30px;">
+    
     <button type="button" class="btn btn-danger"><a href="{% url 'logout' %}" style="text-decoration: none;
         color: #FFF;">Logout</a></button>
 
     <button type="button" class="btn btn-warning" ><a href="https://billing.stripe.com/p/login/test_4gwdT7eOrblLgnK8ww" style="text-decoration: none;
         color: #FFF;">Cancelar/Alterar Plano</a></button>
+</div>
+
     
     <section class="transparencia">
         <h2>Conheça nossos planos</h2>

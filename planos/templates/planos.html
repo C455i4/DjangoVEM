@@ -2,51 +2,31 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Buy cool new product</title>
+    <title>Subscribe to a cool new product</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://js.stripe.com/v3/"></script>
   </head>
   <body>
     <section>
       <div class="product">
-        <img src="https://i.imgur.com/EHyR2nP.png" alt="The cover of Stubborn Attachments" />
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="14px" height="16px" viewBox="0 0 14 16" version="1.1">
+            <defs/>
+            <g id="Flow" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="0-Default" transform="translate(-121.000000, -40.000000)" fill="#E184DF">
+                    <path d="M127,50 L126,50 C123.238576,50 121,47.7614237 121,45 C121,42.2385763 123.238576,40 126,40 L135,40 L135,56 L133,56 L133,42 L129,42 L129,56 L127,56 L127,50 Z M127,48 L127,42 L126,42 C124.343146,42 123,43.3431458 123,45 C123,46.6568542 124.343146,48 126,48 L127,48 Z" id="Pilcrow"/>
+                </g>
+            </g>
+        </svg>
         <div class="description">
-          <h3>{{plano.nome}}</h3>
-          <h5>R${{plano.get_display_price}}</h5>
+          <h3>Starter plan</h3>
+          <h5>$20.00 / month</h5>
         </div>
       </div>
-      
-        <button type="submit" id="checkout-button">Checkout</button>
-      
+      <form action="/create-checkout-session" method="POST">
+        <!-- Add a hidden field with the lookup_key of your Price -->
+        <input type="hidden" name="lookup_key" value="{{PRICE_LOOKUP_KEY}}" />
+        <button id="checkout-and-portal-button" type="submit">Checkout</button>
+      </form>
     </section>
-    {% csrf_token %}
   </body>
-  <script type="text/javascript">
-    const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
-    var stripe = Stripe("{{ STRIPE_PUBLIC_KEY }}");
-    var checkoutButton = document.getElementById("checkout-button");
-    checkoutButton.addEventListener("click", function () {
-      fetch("{% url 'create-checkout-session' plano.id %}", {
-        method:"POST",
-        headers: {
-          'X-CSRFToken': csrftoken
-        }
-      })
-      .then(function (response){
-        return response.json();
-      })
-      .then(function(session){
-        return stripe.redirectToCheckout({ sessionId: session.id });
-      })
-      .then(function (result){
-        if (result.error){
-          alert(result.error.message);
-        }
-      })
-        .cath(function (error){
-          console.error("Error:", error);
-        })
-    });
-
-  </script>
 </html>
