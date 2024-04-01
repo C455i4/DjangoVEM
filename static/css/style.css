@@ -142,7 +142,7 @@ p{
 .container .card{
     margin: 30px;
     width: 350px;
-    height: 350px;
+    height: 150px;
     text-align: left;
 }
 .container .card h3{
@@ -152,6 +152,7 @@ p{
     display: flex;
     justify-content: center;
     margin-bottom: 15px;
+    
 }
 
 .container .card img{
@@ -167,7 +168,7 @@ p{
 }
 .container .card p{
     color: #495665; 
-    font-size: 16px;
+    font-size: 20px;
     padding: 10px;
     font-style: normal;
     font-weight: 400;
@@ -388,6 +389,16 @@ p{
 }
 
 
+
+.redes{
+    display: flex;
+    justify-content: flex-start;
+    
+}
+
+.redes .carde{
+    margin: 10px;
+}
 
 
 

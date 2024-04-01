@@ -6,44 +6,77 @@
 {% endblock %}
 
 {% block hero%}
-<div>
-<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" >
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+
+<div class="container-sm" style="margin-top: 30px; margin-bottom: 30px;">
+  <h2 style="text-align: center; margin-bottom: 30px;">Nossa história</h2>
+
+
+
+  <div class="row g-0 bg-body-secondary position-relative">
+    <div class="col-md-6 mb-md-0 p-md-4">
+      <img src="{% static 'img/sobre.jpg' %}" class="w-100" alt="...">
     </div>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="{% static 'img/carrossel1.jpg' %}" class="d-block w-100" alt="...">
-        <div class="carousel-caption d-none d-md-block">
-          <h5>Tarde de chá solidário da VEM</h5>
-          <p style="color: aliceblue;">Muito mais que o sentido financeiro, elas representam  o valor humanitário daqueles que fazem o bem pelos que mais precisam.</p>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img src="{% static 'img/carrossel2.jpg' %}" class="d-block w-100" alt="...">
-        <div class="carousel-caption d-none d-md-block">
-          <h5>Dia das Crianças</h5>
-          <p style="color: aliceblue;">E o nosso dia das crianças foi mais que especial na Vila Biribiri 🌞</p>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img src="{% static 'img/carrossel3.jpg' %}" class="d-block w-100" alt="...">
-        <div class="carousel-caption d-none d-md-block">
-          <h5>Festa Junina</h5>
-          <p style="color: aliceblue;">"O Arraiá da VEM foi bão dimais da conta!"</p>
-        </div>
-      </div>
+    <div class="col-md-6 p-4 ps-md-0">
+      
+      <p>A Vila Educacional de Meninas foi criada pelo casal Suíço,
+        Irene e Bernardo Bislin e oficializada na Assembleia Geral da Sociedade Protetora da
+        Infância em 21 de Dezembro de 1993. </p>
+        <p>Atualmente atende 110 meninas no contra turno escolar. As atendidas
+          realizam atividades diversas e recebem alimentação, formação humana e social,
+          atendimento psicológico, pedagógico, apoio médico e odontológico.</p>
+        <p>Tem como modalidade de atendimento o Serviço de Convivência e Fortalecimento
+            de Vínculos e funciona como um Centro de Convivência. </p>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
   </div>
+
+  <div class="row g-0 bg-body-secondary position-relative">
+    
+    <div class="col-md-6 p-4 ps-md-0">
+        <p>A realidade do município, majoritariamente nos
+          bairros periféricos e distritos mais distantes da sede, é de famílias que se encontram com
+          baixo poder aquisitivo decorrente do alto índice de desemprego da região, alimentação e
+          saúde deficitárias, condições de saneamento básico comprometidas, baixa autoestima e
+          violação dos direitos humanos.</p>
+      
+        <p>Sua missão é trabalhar na promoção, proteção e desenvolvimento integral das
+          atendidas, visando a cultura da vida e da esperança.</p>
+    </div>
+    <div class="col-md-6 mb-md-0 p-md-4">
+      <img src="{% static 'img/vem.jpg' %}" class="w-100" alt="...">
+    </div>
+  </div>
+
+ 
+  <h2 style="text-align: center; margin-bottom: 30px;">Algumas Atividades</h2>
+<div class="row row-cols-1 row-cols-md-3 g-4">
+  <div class="col">
+    <div class="card h-100">
+      <img src="{% static 'img/carrossel1.jpg' %}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Tarde de chá solidário da VEM</h5>
+        <p class="card-text">Elas representam  o valor humanitário daqueles que fazem o bem pelos que mais precisam.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+      <img src="{% static 'img/carrossel2.jpg' %}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Dia das Crianças</h5>
+        <p class="card-text">E o nosso dia das crianças foi mais que especial na Vila Biribiri 🌞</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+      <img src="{% static 'img/carrossel3.jpg' %}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Festa Junina</h5>
+        <p class="card-text">"O Arraiá da VEM foi bão dimais da conta!"</p>
+      </div>
+    </div>
+  </div>
+</div>
+ 
 </div>
 {% endblock %}
