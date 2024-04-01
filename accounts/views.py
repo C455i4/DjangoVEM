@@ -6,6 +6,7 @@ from django.shortcuts import redirect
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import authenticate, login
 from django.contrib.auth import logout
+from django.contrib.auth.decorators import login_required
 # Create your views here.
 def cadastrar(request):
     if request.method == "POST":
@@ -36,3 +37,35 @@ def logar(request):
 def logout_view(request):
     logout(request)
     return redirect('index')
+
+@login_required()
+def listarUsuario(request):  
+    lista_user = CustomUser.objects.all()
+    return render(request,"listar.html",{'lista_user':lista_user})  
+
+@login_required
+def editar(request, cpf):  
+    user = CustomUser.objects.get(cpf=cpf) 
+    return render(request,'editar.html', {'user':user})  
+
+@login_required
+def atualizar(request, cpf):  
+    user = CustomUser.objects.get(cpf=cpf)
+
+    form = UsuarioForm(request.POST, instance=user)  
+    if form.is_valid():
+        try:
+            form.instance.user = request.user
+            form.save()  
+            return redirect('/')
+        except ValueError:
+            print(ValueError)
+            
+    else: 
+        return render(request, 'editar.html', {'user':user}) 
+ 
+@login_required
+def remover(request, cpf):  
+    user = CustomUser.objects.get(cpf=cpf)  
+    user.delete()  
+    return redirect("/") 
