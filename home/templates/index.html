@@ -47,7 +47,7 @@
                     <h2>Há 30 anos fazendo a diferença</h2>
                     <p>Conheça nossos projetos e faça parte desse movimento!</p>
                     <button class="botao"> <a href="{% url 'projetos' %}">Projetos</a></button>
-                    <button class="botao"> <a href="{% url 'apadrinhe' %}"> Apadrinhe</a></button>
+                    <button class="botao"> <a href="{% url 'accounts' %}"> Apadrinhe</a></button>
                 </div>
             </section>
             
@@ -56,30 +56,22 @@
                 <div class="container">
                     <div class="card">
                         <div class="img"><img src="{% static 'img/casa.png' %}" alt="casa do bem"></div>
-                        <h3>Conheça a VEM</h3>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                            Lorem Ipsum has been the
-                            industry's standard dummy text ever since the 1500s,
-                            when an unknown printer took a galley of type and 
-                            scrambled it to make a type specimen book</p>
+        
+                        <p>Uma instituição que
+                            insere a criança e a adolescente na sociedade por meio da
+                            cultura, arte, educação, esporte e lazer</p>
                     </div>
                     <div class="card">
                         <div class="img"><img src="{% static 'img/menina.png' %}" alt="menina"></div>
-                        <h3>Conheça a VEM</h3>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                            Lorem Ipsum has been the
-                            industry's standard dummy text ever since the 1500s,
-                            when an unknown printer took a galley of type and 
-                            scrambled it to make a type specimen book</p>
+                      
+                        <p>Todas as atividades são desenvolvidas por profissionais qualificados para cada
+                            oficina de forma interativa</p>
                     </div>
                     <div class="card">
                         <div class="img"><img src="{% static 'img/cuidados-de-saude.png' %}" alt="doação"></div>
-                        <h3>Conheça a VEM</h3>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                            Lorem Ipsum has been the
-                            industry's standard dummy text ever since the 1500s,
-                            when an unknown printer took a galley of type and 
-                            scrambled it to make a type specimen book</p>
+                        
+                        <p>São organizados encontros com palestras, oficinas diversas, atividades educativas e de valorização das
+                            famílias. </p>
                     </div>
                 </div>
             </section>
@@ -126,52 +118,48 @@
                         <h3>R$15 <span>/ mês</span> </h3>
                         
                         <ul>
-                            <li>Sua doação</li>
-                            <li>Ajuda nas despesas</li>
-                            <li>-</li>
+                            <li>Contribua com a compra de alimentos, materiais de higiene e pagamento das despesas</li>
+                            
                             
                         </ul>
-                        <div class="botao-trans"><button class="botao"> <a href="{% url 'apadrinhe' %}"> Saiba mais</a></button></div>
+                        <div class="botao-trans"><button class="botao"> <a href="{% url 'accounts' %}"> Assine</a></button></div>
                     </div>
 
                     <div class="card">
                         <p>Plano Borboleta</p>
                         <h3>R$20  <span>/ mês</span></h3>
                         <ul>
-                            <li>Alimentação</li>
-                            <li>Produtos de higiene</li>
-                            <li>-</li>
-                            <li>-</li>
+                            <li>Contribua para o projeto Espaço Escola Salão de Beleza e para o Projeto Enem Social</li>
+                           
+                            
                         </ul>
-                        <div class="botao-trans"><button class="botao"> <a href="{% url 'apadrinhe' %}"> Saiba mais</a></button></div>
+                        <div class="botao-trans"><button class="botao"> <a href="{% url 'accounts' %}"> Assine</a></button></div>
                     </div>
 
                     <div class="card">
                         <p>Plano Arco-íris</p>
                         <h3>R$50 <span>/ mês</span></h3>
                         <ul>
-                            <li>Uniformes</li>
-                            <li>Livros</li>
-                            <li>Cursos</li>
-                            <li>-</li>
+                            <li>Contribua para o projeto Cultura e Lazer e para o projeto Vulnerabilidade Social</li>
+                            
                         </ul>
-                        <div class="botao-trans"><button class="botao"> <a href="{% url 'apadrinhe' %}">Saiba mais</a></button></div>
+                        <div class="botao-trans"><button class="botao"> <a href="{% url 'accounts' %}">Assine</a></button></div>
                     </div>
 
                     <div class="card">
                         <p>Plano Algodão Doce</p>
                         <h3>R$100 <span>/ mês</span></h3>
                         <ul>
-                            <li>Roupas e sapatos</li>
-                            <li>Secadores e pranchas </li>
-                            <li>shampoo e condicionador</li>
-                            <li>Artesanato</li>
+                            <li>Contribua para o Projeto Esporte e Lazer e também para o Projeto Educador Social</li>
+                            
                         </ul>
-                        <div class="botao-trans"><button class="botao"> <a href="{% url 'apadrinhe' %}">Saiba mais</a></button></div>
+                        <div class="botao-trans"><button class="botao"> <a href="{% url 'accounts' %}">Assine</a></button></div>
                     </div>
                 </div>
             </section>
 
+            
+        
             <!--Venha nos visitar-->
 
             <div class="visitar">
@@ -193,6 +181,19 @@
                             <p>Diamantina-MG, Centro, Rua da Luz, n 340</p>
                             <p>vilaeducacionaldemeninas@gmail.com</p>
                             <p>+55 (38) 91234-5678</p>
+                            <div class="redes">
+                   
+                                <div class="carde">
+                                    <div class="img"><a href="https://www.instagram.com/vilaeducacionaldemeninas/"><img src="{% static 'img/instagram.png' %}" alt="instagram"></a></div>
+                                </div>
+                                <div class="carde">
+                                    <div class="img"><a href="https://www.facebook.com/VEMDiamantina"><img src="{% static 'img/facebook.png' %}" alt="facebook"></a></div>
+                                </div>
+                                <div class="carde">
+                                    <div class="img"><a href="https://www.youtube.com/"><img src="{% static 'img/youtube.png' %}" alt="youtube"></a></div>
+                                </div>
+                            </div>
+                      
                         </div>
                     </div>
             

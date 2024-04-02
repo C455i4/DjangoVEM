@@ -1,9 +1,18 @@
 {% extends 'modelo.html' %}
+{% load static %}
 
 {% block titulo %}
 <title>Transparência</title>
 {% endblock %}
 
 {% block hero%}
-    <p>Pagina Transparencia</p>
+<div class="container-sm" style="margin-top: 30px; margin-bottom: 30px;">
+    <h2 style="text-align: center; margin-bottom: 30px;">Transparência</h2>
+    <figure class="figure">
+        <img src="{% static 'img/pizza.png' %}" class="figure-img img-fluid rounded" alt="Grafico de Pizza">
+    </figure>
+    <figure class="figure">
+        <img src="{% static 'img/grafico.png' %}" class="figure-img img-fluid rounded" alt="Grafico de Pizza">
+    </figure>
+</div>
 {% endblock %}

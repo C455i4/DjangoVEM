@@ -9,186 +9,173 @@
 
 {% block hero%}
 
-<div class="col-md-6 m-auto" style="width: 80%; padding: 20px;
-background-color: #fff; 
-border-radius: 10px;
-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); margin-bottom: 30px;">
-
-<form class="row g-3" method="post">
-    {% csrf_token %}
-
-    <div class="form-group row mb-2 d-flex flex-column align-content-center">  
-        <div class="col-sm-10 text-center"><h3 style="color: #265691; padding: 10px;">Cadastro</h3></div>  
-      </div> 
-    <div class="col-md-3">
-     {{form_usuario.email.errors}}
-      <label for="validationDefault01" class="form-label">E-mail:</label>
-      <input type="text" class="form-control" id="validationDefault01" name= "{{ form_usuario.email.name }}"/>
-    </div>
-    <div class="col-md-3">
-        {{form_usuario.nome.errors}}
-      <label for="validationDefault02" class="form-label">Nome:</label>
-      <input type="text" class="form-control" id="validationDefault02" name=" {{form_usuario.nome.name}}" required />
-    </div>
-    <div class="col-md-3">
-        {{form_usuario.password.errors}}
-      <label for="validationDefaultUsername" class="form-label">Senha:</label>
-      <input type="password" class="form-control" name= "{{ form_usuario.password.name }}" required />
-    </div>
-    <div class="col-md-3">
-        {{form_usuario.cpf.errors}}
-      <label for="validationDefault03" class="form-label">CPF:</label>
-      <input type="text" class="form-control" id="validationDefault03" name="{{form_usuario.cpf.name}}" required>
-    </div>
-    <div class="col-md-4">
-        {{form_usuario.telefone.errors}}
-      <label for="validationDefault05" class="form-label">Telefone:</label>
-      <input type="text" class="form-control" id="validationDefault05" name="{{form_usuario.telefone.name}}" required>
-    </div>
-    <div class="col-md-2">
-        {{form_usuario.cep.errors}}
-      <label for="validationDefault06" class="form-label">CEP:</label>
-      <input type="text" class="form-control" id="validationDefault06" name=" {{form_usuario.cep.name}}" required>
-    </div>
-    <div class="col-md-4">
-        {{form_usuario.endereco.errors}}
-      <label for="validationDefault07" class="form-label">Endereço:</label>
-      <input type="text" class="form-control" id="validationDefault07" name=" {{form_usuario.endereco.name}}" required>
-    </div>
-    <div class="col-md-2">
-        {{form_usuario.numero.errors}}
-      <label for="validationDefault07" class="form-label">Número:</label>
-      <input type="text" class="form-control" id="validationDefault07" name=" {{form_usuario.numero.name}}" required>
-    </div>
-    <div class="col-md-3">
-        {{form_usuario.complemento.errors}}
-      <label for="validationDefault08" class="form-label">Complemento:</label>
-      <input type="text" class="form-control" id="validationDefault08" name=" {{form_usuario.complemento.name}}" required>
-    </div>
-    <div class="col-md-3">
-        {{form_usuario.bairro.errors}}
-      <label for="validationDefault09" class="form-label">Bairro:</label>
-      <input type="text" class="form-control" id="validationDefault09" name=" {{form_usuario.bairro.name}}" required>
-    </div>
-    <div class="col-md-2">
-        {{form_usuario.uf.errors}}
-      <label for="validationDefault10" class="form-label">UF:</label>
-      <input type="text" class="form-control" id="validationDefault10" name=" {{form_usuario.uf.name}}" required>
-    </div>
-    <div class="col-md-3">
-        {{form_usuario.cidade.errors}}
-      <label for="validationDefault11" class="form-label">Cidade:</label>
-      <input type="text" class="form-control" id="validationDefault11" name=" {{form_usuario.cidade.name}}" required>
-    </div>
-    <div class="col-10">
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
-        <label class="form-check-label" for="invalidCheck2">
-          Aceito os termos e condições
-        </label>
+<div class="col-md-6 m-auto"  style="display: flex;
+justify-content: center; margin-top: 30px; width: 100%; height: 400px;
+">
+   
+      <div class="col-md-4">
+        <img src="{% static 'img/inscreva.svg' %}" class="card-img" alt="..." style="height: 450px;">
       </div>
-    </div>
-    <div class="col-12">
-      <button class="btn btn-primary"  value="Cadastrar" type="submit">Cadastrar</button>
-    </div>
-  </form>
-</div>
-
-
-
-
-
-<!--
-    <div class="container-form">
-        <div class="form">
+  <div  style="width: 40%; padding: 20px; background-color: #fff; 
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
             <form method="post">
                 {% csrf_token %}
+                
                 <div class="form-header">
-                    <div class="title">
-                        <h1>Cadastre-se</h1>
-                    </div>
-                    <div class="entrar">
-                        <button><a href="">Entrar</a></button>
-                    </div>
+                  <div class="form-group row mb-2 d-flex flex-column align-content-center">  
+                    <div class="col-sm-10 text-center"><h3 style="color: #265691;">Cadastre-se</h3></div>  
+                  </div> 
                 </div>
-                <div class="input-group">
-                    <div class="form-group">
-                        {{form_usuario.email.errors}}
-                        <label>E-mail: </label>
-                        {{form_usuario.email}}
-                    </div>
-                    <div class="form-group">
-                        {{form_usuario.nome.errors}}
-                        <label>Nome: </label>
-                        {{form_usuario.nome}}
-                    </div>
-                    <div class="form-group">
+                <div class="row" >
+                    <div class="col" >
+                      {{form_usuario.email.errors}}
+                      <label>E-mail: </label>
+                      <input type="text" name="{{ form_usuario.email.name }}"  class="form-control" >
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    {{form_usuario.nome.errors}}
+                    <label>Nome: </label>
+                    <input type="text" name="{{ form_usuario.nome.name }}"  class="form-control" >
+                  </div>
+                </div>
+                
+                  <div class="row" >
+                    
+                    <div class="col">
                         {{form_usuario.password.errors}}
                         <label>Senha: </label>
-                        <input type="password" name= "{{ form_usuario.password.name }}"/>
+                        <input type="password" name= "{{ form_usuario.password.name }}" class="form-control">
                     </div>
-                    <div class="form-group">
+            
+                    <div class="col">
                         {{form_usuario.cpf.errors}}
                         <label>CPF: </label>
-                        {{form_usuario.cpf}}
+                        <input type="text" name="{{ form_usuario.cpf.name }}"  class="form-control" >
                     </div>
-                    <div class="form-group">
+                  </div>
+
+                  <div class="row">
+                    <div class="col">
                         {{form_usuario.telefone.errors}}
                         <label>Telefone: </label>
-                        {{form_usuario.telefone}}
-                    </div>
-                    <div class="form-group">
-                        {{form_usuario.cep.errors}}
-                        <label>CEP: </label>
-                        {{form_usuario.cep}}
-                    </div>
-                    <div class="form-group">
-                        {{form_usuario.endereco.errors}}
-                        <label>Endereço: </label>
-                        {{form_usuario.endereco}}
-                    </div>
-                    <div class="form-group">
-                        {{form_usuario.numero.errors}}
-                        <label>Numero: </label>
-                        {{form_usuario.numero}}
-                    </div>
-                    <div class="form-group">
-                        {{form_usuario.complemento.errors}}
-                        <label>Complemento: </label>
-                        {{form_usuario.complemento}}
-                    </div>
-                    <div class="form-group">
-                        {{form_usuario.bairro.errors}}
-                        <label>Bairro: </label>
-                        {{form_usuario.bairro}}
-                    </div>
-                    <div class="form-group">
+                        <input type="text" name="{{ form_usuario.telefone.name }}"  class="form-control" >
+                    </div> 
+
+                    <div class="col">
                         {{form_usuario.uf.errors}}
                         <label>UF: </label>
-                        {{form_usuario.uf}}
+                        <input type="text" name="{{ form_usuario.uf.name }}"  class="form-control" >
                     </div>
-                    <div class="form-group">
-                        {{form_usuario.cidade.errors}}
-                        <label>Cidade: </label>
-                        {{form_usuario.cidade}}
-                    </div>
+                    
+              </div>
+
+              <div class="row">
+                <div class="col">
+                  {{form_usuario.cidade.errors}}
+                  <label>Cidade: </label>
+                  <input type="text" name="{{ form_usuario.cidade.name }}"  class="form-control" >
                 </div>
-                <div class="continue-buton">
-                    <input type="submit" value="Cadastrar" class="btn btn-primary">
+                <div class="col" style="margin-top: 20px;">
+                  <input type="submit" value="Cadastrar" class="btn btn-primary">
                 </div>
-                       
-                
+              </div>
+              
+               
+            
             </form>
-        
+        </div>
         </div>
 
-    </div>
--->
+  
+
         
 {% endblock %}
 
 {% block visitar %}
 {% endblock %}
 
+{% block footer %}
+{% endblock %}
 
 
+<!-- <div class="col-md-6 m-auto">
+ 
+  
+  <form method="POST" class="post-form">  
+    {% csrf_token %}  
+    <div class="container my-4 ">
+      <div class="bg-light py-3 border">  
+  
+        <div class="form-group row mb-2 d-flex flex-column align-content-center">  
+          <div class="col-sm-10 text-center"><h3 style="color: #265691; padding: 10px;">Cadastrar</h3></div>  
+        </div>  
+
+        <div class="form-group row mb-2 justify-content-center">  
+          {{form_usuario.email.errors}}
+          <label class="col-sm-4 col-form-label">Email:</label>  
+          <div class="col-sm-4">  
+            {{form_usuario.email}} 
+          </div>  
+        </div> 
+
+        <div class="form-group row mb-2 justify-content-center">  
+          {{form_usuario.nome.errors}}
+          <label class="col-sm-4 col-form-label">Nome</label>  
+          <div class="col-sm-4">  
+            {{form_usuario.nome}}
+          </div>  
+        </div>  
+
+        <div class="form-group row mb-2 justify-content-center">  
+          {{form_usuario.password.errors}}
+          <label class="col-sm-4 col-form-label">Senha:</label>  
+          <div class="col-sm-4">  
+            <input type="password" name= "{{ form_usuario.password.name }}"/>  
+          </div>  
+        </div>  
+
+        <div class="form-group row mb-2 justify-content-center">  
+          {{form_usuario.cpf.errors}}
+          <label class="col-sm-4 col-form-label">CPF:</label>  
+          <div class="col-sm-4">  
+            {{form_usuario.cpf}} 
+          </div>  
+        </div> 
+
+        <div class="form-group row mb-2 justify-content-center">  
+          {{form_usuario.telefone.errors}}
+          <label class="col-sm-4 col-form-label">Telefone:</label>  
+          <div class="col-sm-4">  
+            {{form_usuario.telefone}}
+          </div>  
+        </div> 
+
+        <div class="form-group row  justify-content-center">  
+          {{form_usuario.uf.errors}}
+          <label class="col-sm-4 col-form-label">UF:</label>  
+          <div class="col-sm-4">  
+            {{form_usuario.uf}}  
+          </div>  
+        </div> 
+
+        <div class="form-group row  justify-content-center">  
+          {{form_usuario.cidade.errors}}
+          <label class="col-sm-4 col-form-label">Cidade:</label>  
+          <div class="col-sm-4">  
+            {{form_usuario.cidade}}  
+          </div>  
+        </div> 
+
+        <div class="form-group row  justify-content-center">   
+          <div class="col-sm-8 mt-3">  
+            <button type="submit" class="btn btn-primary ">Enviar</button>  
+          </div>  
+        </div>
+
+      </div>
+    </div>
+  </form>  
+</div>  -->

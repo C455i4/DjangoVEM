@@ -1,11 +1,73 @@
 {% extends 'modelo.html' %}
-
+{% load static %}
 {% block titulo %}
 <title>Projetos</title>
 {% endblock %}
 
 {% block hero%}
-    <p>Pagina Projetos</p>
+<div class="container-sm" style="margin-top: 30px; margin-bottom: 30px;">
+    <h2 style="text-align: center; margin-bottom: 30px;">Nossos Projetos</h2>
+    
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col">
+        <div class="card h-100">
+          <img src="{% static 'img/salao.png' %}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Espaço Escola Salão de Beleza</h5>
+            <p class="card-text">Oferecer profissionalização na área de cabeleireiro, manicure e design de sombrancelhas para pessoas em situação de extrema pobreza
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="{% static 'img/enem.png' %}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Enem Social</h5>
+            <p class="card-text">Oportunizar o ingresso de alunos em situação de vulnerabilidade socioeconômica das escolas públicas no ensiona superior</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="{% static 'img/cultura.png' %}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Cultura e Lazer</h5>
+            <p class="card-text">Realizar atividades que possam promover o acesso à cultura, à arte, à educação, ao lazer e ao brincar para as crianças</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="{% static 'img/psi.png' %}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Vulnerabilidade Social: Uma proposta de intervenção psicológica</h5>
+            <p class="card-text">Ofertar o Serviço de Convivência e Fortalecimento de Vínculos com suporte do profissional de nível
+                superior na área da psicologia, para 110 alunas entre crianças e adolescentes matriculadas na VEM e familiares</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="{% static 'img/esporte.png' %}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Projeto Esporte e Lazer: Garantindo a qualidade de vida </h5>
+            <p class="card-text">Melhorar o espaço físico da quadra para ampliar a oferta de atividades esportivas
+                e de lazer, proporcionando melhor qualidade de vida.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="{% static 'img/estudo.png' %}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Educador Social: Importante papel no Serviço de Convivência e Fortalecimento de Vínculos </h5>
+            <p class="card-text">Adquirir recurso financeiro para pagamento de 05 educadoras sociais e propiciar o acompanhamento individual e coletivo das alunas nas atividades cotidianas dentro da instituição.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
 {% endblock %}
 
 
