@@ -24,11 +24,13 @@ class CustomUser(AbstractUser):
     nome = models.CharField(max_length = 200,blank=False, null=False)
     cpf = models.CharField(max_length = 200,blank=False, null=False)
     telefone = models.CharField(max_length = 100,blank=False, null=False)
-    cep = models.CharField(max_length = 20,blank=False, null=False)
-    endereco = models.CharField(max_length = 200,blank=False, null=False)
-    numero = models.CharField(max_length = 20,blank=False, null=False)
-    complemento = models.CharField(max_length = 200, blank=False,  default='nenhum')
-    bairro = models.CharField(max_length = 200,blank=False, null=False)
+
+    cep = models.CharField(max_length = 20,blank=True, null=True)
+    endereco = models.CharField(max_length = 200,blank=True, null=True)
+    numero = models.CharField(max_length = 20,blank=True, null=True)
+    complemento = models.CharField(max_length = 200, blank=True,  default='nenhum')
+    bairro = models.CharField(max_length = 200,blank=True, null=True)
+
     uf = models.CharField(max_length = 20,blank=False, null=False)
     cidade = models.CharField(max_length = 200,blank=False, null=False)
 
