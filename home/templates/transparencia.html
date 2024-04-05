@@ -7,7 +7,32 @@
 
 {% block hero%}
 <div class="container-sm" style="margin-top: 30px; margin-bottom: 30px;">
-    <h2 style="text-align: center; margin-bottom: 30px;">Transparência</h2>
+    <h2 style="text-align: center;">Transparência</h2>
+    <p style="text-align: center ">Na Vila Educacional de Meninas, a transparência é um dos nossos valores fundamentais. </p>
+    
+        <div style=" display: flex;
+        justify-content: center;" >
+            <div style="margin: 30px;" >
+                
+                <p style="color: #265691; font-weight: 800; font-size: 50px; text-align: center;" id="contadorMeninas">0</p>
+                <p style="text-align: center;">Meninas Atendidas</p>
+            </div>
+            <div style="margin: 30px;" >
+                
+                <p style="color: #265691; font-weight: 800; font-size: 50px; text-align: center;" id="contadorCompras">0</p>
+                <p style="text-align: center;">Reais Arrecadados</p>
+            </div>
+            <!-- <div style="margin: 30px;">
+                <p style="color: #265691; font-weight: 500; font-size: 50px; text-align: center;" id="contadorCompras">0</p>
+                <p style="text-align: center;">Reais Arrecadados</p>
+            </div> -->
+        </div>
+    
+        
+         
+     
+         <script src="{% static 'js/script.js' %}"></script>
+    
     <figure class="figure">
         <img src="{% static 'img/pizza.png' %}" class="figure-img img-fluid rounded" alt="Grafico de Pizza">
     </figure>
@@ -15,4 +40,5 @@
         <img src="{% static 'img/grafico.png' %}" class="figure-img img-fluid rounded" alt="Grafico de Pizza">
     </figure>
 </div>
+
 {% endblock %}

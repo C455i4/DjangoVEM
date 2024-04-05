@@ -3,83 +3,102 @@
 {% block titulo %}
 <title>Doação</title>
 {% endblock %}
-{% block header %}
-{% endblock %}
+
 {% block hero%}
-<div style="margin: 30px;">
+<div class="container-sm" style="margin-top: 30px; margin-bottom: 30px;">
+    <div style="text-align: end ">
     
-    <button type="button" class="btn btn-danger"><a href="{% url 'logout' %}" style="text-decoration: none;
-        color: #FFF;">Logout</a></button>
+    <button type="button" class="btn btn-primary"><a href="{% url 'editar' %}" style="text-decoration: none;
+        color: #FFF;">Editar Dados</a></button>
 
     <button type="button" class="btn btn-warning" ><a href="https://billing.stripe.com/p/login/test_4gwdT7eOrblLgnK8ww" style="text-decoration: none;
         color: #FFF;">Cancelar/Alterar Plano</a></button>
-</div>
+    
+    <button type="button" class="btn btn-danger"><a href="{% url 'logout' %}" style="text-decoration: none;
+        color: #FFF;">Logout</a></button>
+    </div> 
+    
 
-    
-    <section class="transparencia">
-        <h2>Conheça nossos planos</h2>
-        <p>Veja como sua ajuda faz a diferença no dia a dia das meninas</p>
-    
-        <div class="trans">
-            
-            <div class="card">
-                <p>Plano Cor de Rosa</p>
-                <h3>R$15 <span>/ mês</span> </h3>
-                
-                <ul>
-                    <li>Sua doação</li>
-                    <li>ajuda nas despesas</li>
-                    <li>-</li>
+
+    <div class="col-md-12 py-3">
+        
+        <div class="table-responsive">
+            <table id="lista_acoes" class="table table-striped table-bordered" width="100%">
+                <thead>
                     
-                </ul>
-                <div class="botao-trans"><button type="button" class="btn btn-success"> <a href="https://buy.stripe.com/test_dR602ydDI5cmdEI8wA" style="text-decoration: none;
-                    color: #FFF;"> Assinar</a></button></div>
-            </div>
-
-            <div class="card">
-                <p>Plano Borboleta</p>
-                <h3>R$20  <span>/ mês</span></h3>
-                <ul>
-                    <li>Alimentação</li>
-                    <li>Produtos de higiene</li>
-                    <li>-</li>
-                    <li>-</li>
-                </ul>
-                <div class="botao-trans"><button type="button" class="btn btn-success"> <a href="https://buy.stripe.com/test_7sI5mS1V020a6cg6oo" style="text-decoration: none;
-                    color: #FFF;"> Assinar</a></button></div>
-            </div>
-
-            <div class="card">
-                <p>Plano Arco-íris</p>
-                <h3>R$50 <span>/ mês</span></h3>
-                <ul>
-                    <li>Uniformes</li>
-                    <li>Livros</li>
-                    <li>Cursos</li>
-                    <li>-</li>
-                </ul>
-                <div class="botao-trans"><button type="button" class="btn btn-success"> <a href="https://buy.stripe.com/test_00gaHcbvAdISeIM3ce" style="text-decoration: none;
-                    color: #FFF;">Assinar</a></button></div>
-            </div>
-
-            <div class="card">
-                <p>Plano Algodão Doce</p>
-                <h3>R$100 <span>/ mês</span></h3>
-                <ul>
-                    <li>Roupas e sapatos</li>
-                    <li>Secadores e pranchas </li>
-                    <li>shampoo e condicionador</li>
-                    <li>Artesanato</li>
-                </ul>
-                <div class="botao-trans"><button type="button" class="btn btn-success"> <a href="https://buy.stripe.com/test_cN29D86bg48i8ko147" style="text-decoration: none;
-                    color: #FFF;">Assinar</a></button></div>
-            </div>
+                    <th>Email</th>
+                    <th>Nome</th>
+                    <th>CPF</th>
+                    <th>Telefone</th>
+                    <th>UF</th>
+                    <th>Cidade</th>
+                    
+                    
+                    <!-- <th>Editar</th> -->
+                    <!-- <th>Cancelar/Alterar Plano</th>
+                    <th>Logout</th> -->
+                    
+                    
+                </thead>
+                <tbody>
+                    
+                    {% load static %}
+                    <tr>  
+                        
+                        <td>{{ user.email }}</td>  
+                        <td>{{ user.nome }}</td>  
+                        <td>{{ user.cpf  }}</td>  
+                        <td>{{ user.telefone }}</td>  
+                        <td>{{ user.uf }}</td>
+                        <td>{{ user.cidade }}</td>
+                        
+                        <!-- <td class="text-center">
+                            <p data-placement="top" data-toggle="tooltip" title="Editar">
+                                <a href="{% url 'editar' %}" class="btn btn-primary btn-sm px-3" data-title="Editar" data-toggle="modal" data-target="#editar" >
+                                    <img src="{% static '/img/pencil.svg' %}">
+                                </a>
+                            </p>
+                        </td> -->
+                        <!-- <td class="text-center">
+                            <p data-placement="top" data-toggle="tooltip" title="Deletar">
+                                <a href="https://billing.stripe.com/p/login/test_4gwdT7eOrblLgnK8ww" class="btn btn-danger btn-sm px-3" data-title="Remover" data-toggle="modal" data-target="#remover" >
+                                    <img src="{% static '/img/trash.svg' %}">
+                                </a>
+                            </p>
+                        </td> 
+                        <td class="text-center">
+                            <p data-placement="top" data-toggle="tooltip" title="Deletar">
+                                <a href="{% url 'logout' %}" class="btn btn-danger btn-sm px-3" data-title="Remover" data-toggle="modal" data-target="#remover" >
+                                    <img src="{% static '/img/trash.svg' %}">
+                                </a>
+                            </p>
+                        </td>  -->
+                    
+                    </tr>  
+                
+                </tbody>         
+            </table>
         </div>
-    </section>
+    </div>
+   
+    <div style="text-align: center ">
+        
+        <p>Escolha um plano para continuar</p>
+        <button type="button" class="btn btn-success"><a href="https://buy.stripe.com/test_dR602ydDI5cmdEI8wA" style="text-decoration: none;
+            color: #FFF;">R$ 15,00</a></button>
+        <button type="button" class="btn btn-success"><a href="https://buy.stripe.com/test_7sI5mS1V020a6cg6oo" style="text-decoration: none;
+            color: #FFF;">R$ 20,00 </a></button>
+        <button type="button" class="btn btn-success"><a href="https://buy.stripe.com/test_00gaHcbvAdISeIM3ce" style="text-decoration: none;
+            color: #FFF;">R$ 50,00</a></button>
+        <button type="button" class="btn btn-success"><a href="https://buy.stripe.com/test_cN29D86bg48i8ko147" style="text-decoration: none;
+            color: #FFF;">R$ 100,00 </a></button> 
+    </div>
 
+</div>
     
 {% endblock %}
 
 
 {% block visitar %}
 {% endblock %}
+

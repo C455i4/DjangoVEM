@@ -32,7 +32,14 @@
                     </nav>
                 </div>
                 <div>
-                    <button class="botao"><a href="{% url 'logar' %}">Login</a></button>
+                    {% if user.is_authenticated %}
+                        <a href="{% url 'doacao' %}" style="color: #265691;
+                        text-decoration: none;
+                        padding-right: 50px;
+                        font-size: 18px;">Olá, {{ user.nome }}!</a>
+                    {% else %}
+                        <button class="botao"><a href="{% url 'logar' %}">Login</a></button>
+                    {% endif %}
                 </div>
             </div>
             
@@ -122,7 +129,11 @@
                             
                             
                         </ul>
-                        <div class="botao-trans"><button class="botao"> <a href="{% url 'accounts' %}"> Assine</a></button></div>
+                        {% if user.is_authenticated %}
+                            <div class="botao-trans"><button class="botao"> <a href="https://buy.stripe.com/test_dR602ydDI5cmdEI8wA"> Assine</a></button></div>
+                        {% else %}
+                            <div class="botao-trans"><button class="botao"> <a href="{% url 'accounts' %}"> Assine</a></button></div>
+                        {% endif %}
                     </div>
 
                     <div class="card">
@@ -133,7 +144,11 @@
                            
                             
                         </ul>
-                        <div class="botao-trans"><button class="botao"> <a href="{% url 'accounts' %}"> Assine</a></button></div>
+                        {% if user.is_authenticated %}
+                            <div class="botao-trans"><button class="botao"> <a href="https://buy.stripe.com/test_7sI5mS1V020a6cg6oo"> Assine</a></button></div>
+                        {% else %}
+                            <div class="botao-trans"><button class="botao"> <a href="{% url 'accounts' %}"> Assine</a></button></div>
+                        {% endif %}
                     </div>
 
                     <div class="card">
@@ -143,7 +158,11 @@
                             <li>Contribua para o projeto Cultura e Lazer e para o projeto Vulnerabilidade Social</li>
                             
                         </ul>
-                        <div class="botao-trans"><button class="botao"> <a href="{% url 'accounts' %}">Assine</a></button></div>
+                        {% if user.is_authenticated %}
+                            <div class="botao-trans"><button class="botao"> <a href="https://buy.stripe.com/test_00gaHcbvAdISeIM3ce"> Assine</a></button></div>
+                        {% else %}
+                            <div class="botao-trans"><button class="botao"> <a href="{% url 'accounts' %}"> Assine</a></button></div>
+                        {% endif %}
                     </div>
 
                     <div class="card">
@@ -153,7 +172,11 @@
                             <li>Contribua para o Projeto Esporte e Lazer e também para o Projeto Educador Social</li>
                             
                         </ul>
-                        <div class="botao-trans"><button class="botao"> <a href="{% url 'accounts' %}">Assine</a></button></div>
+                        {% if user.is_authenticated %}
+                            <div class="botao-trans"><button class="botao"> <a href="https://buy.stripe.com/test_cN29D86bg48i8ko147"> Assine</a></button></div>
+                        {% else %}
+                            <div class="botao-trans"><button class="botao"> <a href="{% url 'accounts' %}"> Assine</a></button></div>
+                        {% endif %}
                     </div>
                 </div>
             </section>

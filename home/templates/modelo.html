@@ -36,7 +36,14 @@
                     </nav>
                 </div>
                 <div>
+                    {% if user.is_authenticated %}
+                    <a href="{% url 'doacao' %}" style="color: #265691;
+                        text-decoration: none;
+                        padding-right: 50px;
+                        font-size: 18px;">Olá, {{ user.nome }}!</a>
+                {% else %}
                     <button class="botao"><a href="{% url 'logar' %}">Login</a></button>
+                {% endif %}
                 </div>
             </div>
             
